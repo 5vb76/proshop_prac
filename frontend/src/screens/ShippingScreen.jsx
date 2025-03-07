@@ -10,7 +10,7 @@ const ShippingScreen = () => {
   const cart = useSelector((state) => state.cart);
   const { shippingAddress } = cart;
 
-  const [address, setAddress] = useState(shippingAdress?.address || "");
+  const [address, setAddress] = useState(shippingAddress?.address || "");
   const [city, setCity] = useState(shippingAddress?.city || "");
   const [postalCode, setPostalCode] = useState(
     shippingAddress?.postalCode || ""
@@ -28,7 +28,7 @@ const ShippingScreen = () => {
 
   return (
     <FormContainer>
-      <CheckoutSteps step2 />
+      <CheckoutSteps step1 />
       <h1>Shipping</h1>
       <Form onSubmit={submitHandler}>
         <Form.Group controlId="address" className="my-3">
@@ -68,12 +68,7 @@ const ShippingScreen = () => {
           ></Form.Control>
         </Form.Group>
 
-        <Button
-          type="submit"
-          variant="primary"
-          className="mt-2 btn-dark"
-          disabled={isLoading}
-        >
+        <Button type="submit" variant="primary" className="mt-2 btn-dark">
           Continue
         </Button>
       </Form>
