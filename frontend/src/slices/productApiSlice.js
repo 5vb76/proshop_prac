@@ -1,3 +1,4 @@
+import { deleteProduct } from "../../../backend/controllers/productController";
 import { PRODUCT_URL } from "../constants";
 import { apiSlice } from "./apiSlice";
 
@@ -15,8 +16,17 @@ export const productsApiSlice = apiSlice.injectEndpoints({
       }),
       keepUnusedDataFor: 5,
     }),
+    deleteProduct: builder.mutation({
+      query: (productId) => ({
+        url: `${PRODUCT_URL}/${productId}`,
+        method: "DELETE",
+      }),
+    }),
   }),
 });
 
-export const { useGetProductsQuery, useGetProductDetailsQuery } =
-  productsApiSlice;
+export const {
+  useGetProductsQuery,
+  useGetProductDetailsQuery,
+  useDeleteProductMutation,
+} = productsApiSlice;
