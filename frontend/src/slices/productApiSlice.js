@@ -1,4 +1,3 @@
-import { deleteProduct } from "../../../backend/controllers/productController";
 import { PRODUCT_URL } from "../constants";
 import { apiSlice } from "./apiSlice";
 

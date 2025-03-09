@@ -1,6 +1,6 @@
 import { Table, Button, Row, Col } from "react-bootstrap";
 import { FaTrash } from "react-icons/fa";
-import Message from "../../components/Message";
+import Message from "../../components/Messager";
 import Loader from "../../components/Loader";
 import { toast } from "react-toastify";
 import {

@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import { LinkContainer } from "react-router-bootstrap";
 import { Button, Row, Col, Form, Table } from "react-bootstrap";
 import { FaTimes } from "react-icons/fa";
-import Message from "../components/Message";
+import Message from "../components/Messager";
 import Loader from "../components/Loader";
-import { useGetMyOrdersQuery } from "../slices/ordersApiSlice";
+import { useGetMyOrdersQuery } from "../slices/orderApiSlice";
 import { useSelector } from "react-redux";
 
 const ProfileScreen = () => {

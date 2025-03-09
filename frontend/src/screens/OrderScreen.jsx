@@ -30,7 +30,7 @@ const OrderScreen = () => {
       details: {
         id: orderId,
         status: "COMPLETED",
-        payer: { ...userInfo },
+        payer: { ...useInfo },
       },
     });
 

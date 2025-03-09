@@ -11,4 +11,4 @@ const AdminRoute = () => {
   );
 };
 
-export default PrivateRoute;
+export default AdminRoute;
